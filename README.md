@@ -40,7 +40,7 @@ $ python harvest.py domains.txt --verbose
 
 | domain | name | title | email | phone | email_verified | confidence | source | linkedin | twitter |
 |--------|------|-------|-------|-------|---------------|------------|--------|----------|---------|
-| seerinteractive.com | John Smith | VP of Sales | john.smith@seer... | (215) 555-0123 | True | 100 | website:/team | linkedin.com/in/... | x.com/... |
+| jamesdean.com | John Smith | VP of Sales | john.smith@jamesdeas. | (215) 555-0123 | True | 100 | website:/team | linkedin.com/in/... | x.com/... |
 
 ---
 
