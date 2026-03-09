@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install flake8
+
+      - name: Lint with flake8
+        run: |
+          flake8 harvest.py modules/ --max-line-length=200 --ignore=E501,W503,E722
+
+      - name: Verify imports
+        run: |
+          python -c "
+          from modules.dns_recon import DNSRecon
+          from modules.website_scraper import WebsiteScraper
+          from modules.email_pattern import EmailPatternEngine
+          from modules.search_harvester import SearchHarvester
+          from modules.smtp_verifier import SMTPVerifier
+          from modules.social_enricher import SocialEnricher
+          from modules.ads_transparency import AdsTransparencyModule
+          from modules.utils import Logger, RateLimiter, deduplicate_contacts
+          print('All imports successful')
+          "
+
+      - name: Verify CLI help
+        run: python harvest.py --help

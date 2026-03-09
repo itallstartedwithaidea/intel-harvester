@@ -1,0 +1,6 @@
+# Domain Harvester — Sample Domains
+# One domain per line. Lines starting with # are ignored.
+# Remove http(s):// and www. — just the domain.
+
+seerinteractive.com
+buffnbeyond.ca
