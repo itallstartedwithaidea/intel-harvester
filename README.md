@@ -17,7 +17,7 @@ Feed it a domain. Get back everything.
 ```
 $ python harvest.py domains.txt --verbose
 
-══════ Harvesting: seerinteractive.com ══════
+══════ Harvesting: jamesdean.com ══════
   ► Step 1: DNS & WHOIS Recon
     Found 3 emails, MX: Google Workspace
   ► Step 2: Website Scraping
