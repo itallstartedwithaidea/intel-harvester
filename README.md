@@ -1,5 +1,7 @@
 # intel-harvester
 
+[English](README.md) | [Français](README.fr.md) | [Español](README.es.md) | [中文](README.zh.md) | [Nederlands](README.nl.md) | [Русский](README.ru.md) | [한국어](README.ko.md)
+
 **Free, open-source OSINT domain intelligence tool.** Extract contacts, emails, phone numbers, job titles, social profiles, and advertising intelligence from any domain — no paid API keys required.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
